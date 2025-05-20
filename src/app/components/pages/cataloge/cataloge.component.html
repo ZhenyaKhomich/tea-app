@@ -1,0 +1,30 @@
+<div class="container mt-3 pt-1">
+  <div *ngIf="noProducts" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="col fw-bold fs-1 text-center">По вашему запросу ничего не найдено</div>
+    <img src="images/notSearch.png" alt="notSearch">
+    <button type="button" class="btn btn-primary hvr-grow" [routerLink]="['/catalog']">К товарам</button>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col fw-bold fs-2 text-center" *ngIf="!noProducts">Наши чайные коллекции</div>
+    <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 row-cols-sm-1 justify-content-around mb-4">
+      <div class="col mt-4" *ngFor="let product of products">
+        <div class="card p-0 wow animate__bounceInDown">
+          <div class="test-popup-link">
+            <img src='{{product.image}}' class="card-img-top" alt="tea1">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">{{product.title}}</h5>
+            <p class="card-text">{{product.description | sliceString}}</p>
+            <button type="button" class="btn btn-primary hvr-grow" [routerLink]="['/product', product.id]">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="isLoading" class="loader-wrap">
+  <div class="loader-top"></div>
+  <div class="loader-bottom"></div>
+  <div class="loader-center"></div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-md bg-body-secondary ps-3 pe-3">
+      <img class="logo" src="/images/tea.png" alt="tea">
+    <button class="navbar-toggler mt-2 mb-1" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#navbarOffcanvasLg"
+            aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+         aria-labelledby="navbarOffcanvasLgLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-center align-self-center flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link main" aria-current="page" routerLink="/" routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/catalog" routerLinkActive='active'>Каталог</a>
+          </li>
+        </ul>
+        <form class="d-flex mt-2 mb-2" role="search">
+          <input class="form-control me-2" type="search" placeholder="Поиск чая" aria-label="Search" name="search" [(ngModel)]="value" >
+          <button class="btn btn-outline-primary" type="button" (click)="search()">Найти</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>

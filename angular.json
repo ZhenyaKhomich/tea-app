@@ -32,9 +32,21 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "public/css/animate.min.css",
+              "public/css/bootstrap.min.css",
+              "public/css/hover.css",
+              "public/css/jquery-ui.css",
+              "public/css/slick.css",
+              "public/css/slick-theme.css"
             ],
-            "scripts": []
+            "scripts": [
+              "public/scripts/jquery-3.7.1.min.js",
+              "public/scripts/jquery-ui.min.js",
+              "public/scripts/bootstrap.min.js",
+              "public/scripts/wow.min.js",
+              "public/scripts/slick.js"
+            ]
           },
           "configurations": {
             "production": {

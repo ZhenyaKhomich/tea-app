@@ -1,0 +1,35 @@
+
+.wrap {
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.card-img {
+  float: left;
+  width: 270px;
+  height: 270px;
+}
+
+.card-text {
+  text-align: justify;
+}
+
+.price {
+  color: #807d7d;
+}
+
+.btn.hvr-grow {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+@media(max-width: 525px) {
+  .card-img {
+   float: none;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

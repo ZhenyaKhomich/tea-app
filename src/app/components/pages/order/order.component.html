@@ -1,0 +1,89 @@
+<div class="container mt-4 pt-1">
+  <div *ngIf="sendFormOk" class="d-flex flex-column justify-content-center align-items-center w-100">
+    <img src="images/thanks.jpg" alt="thanks" class="w-25 mb-3">
+    <button class="btn btn-primary mt-5 mb-5" routerLink="/">На главную</button>
+  </div>
+  <div *ngIf="!sendFormOk" class="row" id="block-form">
+    <div class="col-12 fw-bold fs-2 text-center mt-2 mb-2 ">Сделать заказ</div>
+    <div class="row justify-content-center ms-0">
+      <div class="col-12 col-md-9">
+        <form class="row w-100" [formGroup]="orderForm" (ngSubmit)="submitForm()">
+          <div class="col-12 col-lg-4 col-sm-6 mt-3">
+            <label class="col-12 wow animate__bounceInLeft">Товар
+              <input type="text" class="form-control noFocus" id="product" formControlName="product" readonly>
+            </label>
+          </div>
+          <div class="col-12 col-lg-4 col-sm-6 mt-3">
+            <label class="col-12 wow animate__bounceInLeft">Имя
+              <input type="text" class="form-control" id="name" formControlName="name">
+              <div class="text-danger" *ngIf="orderNameInvalid && orderNameTouchedAndDirty">
+                <div *ngIf="orderNameErrorsRequired">Введите имя</div>
+                <div *ngIf="orderNameErrorsPattern">Допустимы только буквы</div>
+              </div>
+            </label>
+          </div>
+          <div class="col-12 col-lg-4 col-sm-6 mt-3">
+            <label class="col-12 wow animate__bounceInDown">Фамилия
+              <input type="text" class="form-control" id="surname" formControlName="last_name">
+              <div class="text-danger" *ngIf="orderLastNameInvalid && orderLastNameTouchedAndDirty">
+                <div *ngIf="orderLastNameErrorsRequired">Введите фамилию</div>
+                <div *ngIf="orderLastNameErrorsPattern">Допустимы только буквы</div>
+              </div>
+            </label>
+          </div>
+          <div class="col-12 col-lg-4 col-sm-6 mt-3">
+            <label class="col-12 wow animate__bounceInRight">Телефон
+              <input type="text" class="form-control" id="phone" formControlName="phone">
+              <div class="text-danger" *ngIf="orderPhoneInvalid && orderPhoneTouchedAndDirty">
+                <div *ngIf="orderPhoneErrorsRequired">Введите телефон</div>
+                <div *ngIf="orderPhoneErrorsPattern">Введите номер из 11 цифр</div>
+              </div>
+            </label>
+          </div>
+          <div class="col-12 col-lg-4 col-sm-6 mt-3">
+            <label class="col-12 wow animate__bounceInLeft">Страна
+              <input type="text" class="form-control" id="country" formControlName="country">
+              <div class="text-danger" *ngIf="orderCountryInvalid && orderCountryTouchedAndDirty">
+                <div *ngIf="orderCountryErrorsRequired">Введите страну</div>
+                <div *ngIf="orderCountryErrorsPattern">Допустимы только буквы</div>
+              </div>
+            </label>
+          </div>
+          <div class="col-12 col-lg-4 col-sm-6 mt-3">
+            <label class="col-12 wow animate__bounceInRight">Индекс
+              <input type="text" class="form-control" id="index" formControlName="zip">
+              <div class="text-danger" *ngIf="orderZipInvalid && orderZipTouchedAndDirty">
+                <div *ngIf="orderZipErrorsRequired">Введите индекс</div>
+                <div *ngIf="orderZipErrorsPattern">Введите 6 цифр</div>
+              </div>
+            </label>
+          </div>
+          <div class="col-12 mt-3">
+            <label class="col-12 wow animate__fadeInUpBig">Адрес
+              <input type="text" class="form-control" id="adress" formControlName="address">
+              <div class="text-danger" *ngIf="orderAddressInvalid && orderAddressTouchedAndDirty">
+                <div *ngIf="orderAddressErrorsRequired">Введите адрес</div>
+                <div *ngIf="orderAddressErrorsPattern">Неверные символы</div>
+              </div>
+            </label>
+          </div>
+          <div class="col-12 mt-3">
+            <label class="col-12 wow animate__fadeInUpBig">Комментарий
+              <textarea type="" class="form-control" id="comment" formControlName="comment"></textarea>
+            </label>
+          </div>
+          <div class="col mt-4 mb-5 text-sm-start text-center d-flex flex-column align-items-center justify-content-center">
+            <button type="submit" class="hvr-grow wow animate__fadeInUpBig btn btn-primary ps-5 pe-5" id="form-btn">Отправить</button>
+            <div class="text-danger" *ngIf="sendFormError">Произошла ошибка. Попробуйте еще раз!</div>
+            <div class="text-danger" *ngIf="sendFormInValid">Форма не валидна. Попробуйте еще раз!</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="isLoading" class="loader-wrap">
+  <div class="loader-top"></div>
+  <div class="loader-bottom"></div>
+  <div class="loader-center"></div>
+</div>

@@ -1,0 +1,9 @@
+.form-control.noFocus:focus {
+  box-shadow: none;
+  border: 1px solid #dee2e6;
+}
+
+input.ng-invalid.ng-touched,
+input.ng-invalid.ng-dirty {
+  border-color: red;
+}
