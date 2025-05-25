@@ -14,66 +14,81 @@
   <div class="row justify-content-center mb-4">
     <div class="col-12 fw-bold fs-2 text-center mt-5 mb-5">Ответы на часто задаваемые вопросы</div>
     <div ngbAccordion [closeOthers]="true" class="w-75">
-      <div ngbAccordionItem [collapsed]="false">
+      <div ngbAccordionItem [collapsed]="false" class="block-accordion">
         <h3 ngbAccordionHeader>
           <button ngbAccordionButton class="rounded-2 text-white bg-primary pe-5 pt-4 pb-4">Собираете ли вы подарочные
             боксы?
           </button>
         </h3>
-        <div ngbAccordionCollapse>
+        <div ngbAccordionCollapse class="collapse">
           <div ngbAccordionBody>
             Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!
           </div>
         </div>
+        <div class="arrow-accordion">
+          <img src="images/down.png" alt="arrow">
+        </div>
       </div>
-      <div ngbAccordionItem>
+      <div ngbAccordionItem class="block-accordion">
         <h3 ngbAccordionHeader>
           <button ngbAccordionButton class="rounded-2 text-white bg-primary pe-5 pt-4 pb-4">Сколько у вас разновидностей
             чая?
           </button>
         </h3>
-        <div ngbAccordionCollapse>
+        <div ngbAccordionCollapse class="collapse">
           <div ngbAccordionBody>
             В нашем магазине огромное количество разновидностей чая на любой вкус и на любую стоимость!
           </div>
         </div>
+        <div class="arrow-accordion">
+          <img src="images/down.png" alt="arrow">
+        </div>
       </div>
-      <div ngbAccordionItem>
+      <div ngbAccordionItem class="block-accordion">
         <h3 ngbAccordionHeader>
           <button ngbAccordionButton class="rounded-2 text-white bg-primary pe-5 pt-4 pb-4">В какой срок осуществляется
             доставка?
           </button>
         </h3>
-        <div ngbAccordionCollapse>
+        <div ngbAccordionCollapse class="collapse">
           <div ngbAccordionBody>
             Доставка производится в течении 1-2 дней по согласованию с покупателем.
           </div>
         </div>
+        <div class="arrow-accordion">
+          <img src="images/down.png" alt="arrow">
+        </div>
       </div>
-      <div ngbAccordionItem>
+      <div ngbAccordionItem class="block-accordion">
         <h3 ngbAccordionHeader>
           <button ngbAccordionButton class="rounded-2 text-white bg-primary pe-5 pt-4 pb-4">У вас обновляется
             ассортимент?
           </button>
         </h3>
-        <div ngbAccordionCollapse>
+        <div ngbAccordionCollapse class="collapse">
           <div ngbAccordionBody>
             Да, ассортимент постоянно обновляется. Добавляются новые разновидности чая. Мы постоянно стараемся улучшить
             наш ассортимент для вашего удобства.
           </div>
         </div>
+        <div class="arrow-accordion">
+          <img src="images/down.png" alt="arrow">
+        </div>
       </div>
-      <div ngbAccordionItem>
+      <div ngbAccordionItem class="block-accordion">
         <h3 ngbAccordionHeader>
           <button ngbAccordionButton class="rounded-2 text-white bg-primary pe-5 pt-4 pb-4">Какого объема у вас пачки
             чая?
           </button>
         </h3>
-        <div ngbAccordionCollapse>
+        <div ngbAccordionCollapse class="collapse">
           <div ngbAccordionBody>
             Обьемы пачек с чаем бывают разные. От 50 грамм до 1 кг. Так же мы предлагаем чай на развес на любой вкус и
             стоимость!
           </div>
+        </div>
+        <div class="arrow-accordion">
+          <img src="images/down.png" alt="arrow">
         </div>
       </div>
     </div>

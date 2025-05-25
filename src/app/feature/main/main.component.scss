@@ -3,15 +3,28 @@
 }
 
 .accordion-button::after {
-  background-image: url('images/down.png');
+  background-image: none
 }
-
-.accordion-button:hover::after {
-  background-image: url('images/up.png');
-}
-
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url('images/down.png');
+  background-image: none;
+
+}
+
+.block-accordion {
+  position: relative;
+}
+
+.block-accordion:hover .arrow-accordion,
+.block-accordion .collapse.show ~.arrow-accordion {
+  transition: all 0.3s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.arrow-accordion {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  z-index: 4;
 }
 
