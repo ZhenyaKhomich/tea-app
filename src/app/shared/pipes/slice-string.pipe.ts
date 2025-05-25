@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'sliceString',
-  standalone: true,
+  standalone: false,
 })
 export class SliceStringPipe implements PipeTransform {
 

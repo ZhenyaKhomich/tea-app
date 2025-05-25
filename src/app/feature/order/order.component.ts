@@ -1,19 +1,13 @@
-import {AfterViewInit, Component, inject, OnInit} from '@angular/core';
+import { Component, inject, OnInit} from '@angular/core';
 import {ActivatedRoute, RouterLink} from '@angular/router';
-import {AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {NgIf} from '@angular/common';
-import {ValidatorCustom} from '../../../validator/validator-custom';
-import {HttpService} from '../../../services/http-service.service';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ValidatorCustom} from '../../validator/validator-custom';
+import {HttpService} from '../../services/http-service.service';
 import {tap} from 'rxjs';
 
 @Component({
   selector: 'order',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    NgIf,
-    RouterLink
-  ],
+  standalone: false,
   templateUrl: './order.component.html',
   styleUrl: './order.component.scss'
 })

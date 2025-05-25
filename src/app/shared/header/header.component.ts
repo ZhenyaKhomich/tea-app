@@ -1,17 +1,11 @@
 import {Component, inject} from '@angular/core';
-import {Router, RouterLink, RouterLinkActive} from '@angular/router';
-import {FormsModule} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'header-component',
-  standalone: true,
-  imports: [
-    RouterLink,
-    RouterLinkActive,
-    FormsModule
-  ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
+  standalone: false
 })
 export class HeaderComponent {
   router: Router = inject(Router);

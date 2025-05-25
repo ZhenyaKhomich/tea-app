@@ -1,17 +1,13 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {ProductsType} from '../../../types/products.type';
-import {filter, map, tap} from 'rxjs';
-import {HttpService} from '../../../services/http-service.service';
-import {ActivatedRoute, RouterLink} from '@angular/router';
-import {NgIf} from '@angular/common';
+import {ProductsType} from '../../types/products.type';
+import { map, tap} from 'rxjs';
+import {HttpService} from '../../services/http-service.service';
+import {ActivatedRoute} from '@angular/router';
+
 
 @Component({
   selector: 'product',
-  standalone: true,
-  imports: [
-    NgIf,
-    RouterLink
-  ],
+  standalone: false,
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })
@@ -39,11 +35,5 @@ export class ProductComponent implements OnInit {
         }
       });
     })
-
-
-
-
-
   }
-
 }

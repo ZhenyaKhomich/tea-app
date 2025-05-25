@@ -33,50 +33,6 @@ button.slick-next.slick-arrow:before{
   width: 40px;
   height: 40px;
 }
-#accordion
-.ui-icon, .ui-widget-content .ui-icon {
-  background: transparent url("/images/down.png");
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-}
-
-.ui-icon {
-  width: 20px!important;
-  height: 16px;
-}
-#accordion
-.ui-state-hover .ui-icon,
-.ui-state-focus .ui-icon,
-.ui-button:hover .ui-icon,
-.ui-button:focus .ui-icon {
-  background: transparent url("/images/up.png");
-  width: 20px;
-}
-#accordion
-.ui-state-active .ui-icon,
-.ui-button:active .ui-icon {
-  background: transparent url("/images/up.png");
-  width: 20px;
-}
-
-.ui-state-highlight .ui-icon,
-.ui-button .ui-state-highlight.ui-icon {
-  background: transparent url("/images/down.png");
-  width: 20px;
-}
-
-.ui-state-error .ui-icon,
-.ui-state-error-text .ui-icon {
-  background: transparent url("/images/down.png");
-  width: 20px;
-}
-
-.ui-button .ui-icon {
-  background: transparent url("/images/down.png");
-  width: 20px;
-}
 
 .loader-wrap {
   position: fixed;

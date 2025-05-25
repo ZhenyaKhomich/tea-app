@@ -1,15 +1,11 @@
-import {Component, ElementRef, inject, OnDestroy, OnInit, Renderer2} from '@angular/core';
-import {DOCUMENT, NgIf} from '@angular/common';
+import {Component, inject, OnDestroy, OnInit, Renderer2} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
 import { Subscription, timer} from 'rxjs';
-import {RouterLink} from '@angular/router';
 declare var $: any;
+
 @Component({
   selector: 'main',
-  standalone: true,
-  imports: [
-    NgIf,
-    RouterLink
-  ],
+  standalone: false,
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
@@ -20,12 +16,8 @@ export class MainComponent implements OnInit, OnDestroy {
   modal!: Subscription;
 
 
-
   ngOnInit() {
     $('.your-class').slick();
-    $("#accordion").accordion({
-      heightStyle: "content"
-    });
 
     this.modal = timer(10000).subscribe(() => {
         this.isModalOpen = true;

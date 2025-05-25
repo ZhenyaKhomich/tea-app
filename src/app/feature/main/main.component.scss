@@ -1,0 +1,17 @@
+.modal.modal-sheet {
+  background-color: rgba(154, 152, 152, 0.5);
+}
+
+.accordion-button::after {
+  background-image: url('/images/down.png');
+}
+
+.accordion-button:hover::after {
+  background-image: url('/images/up.png');
+}
+
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url('/images/down.png');
+}
+

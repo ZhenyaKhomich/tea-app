@@ -43,7 +43,7 @@
             "scripts": [
               "public/scripts/jquery-3.7.1.min.js",
               "public/scripts/jquery-ui.min.js",
-              "public/scripts/bootstrap.min.js",
+
               "public/scripts/wow.min.js",
               "public/scripts/slick.js"
             ]

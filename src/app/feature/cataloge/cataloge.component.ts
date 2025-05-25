@@ -1,20 +1,12 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {HttpService} from '../../../services/http-service.service';
-import {ProductsType} from '../../../types/products.type';
-import {NgForOf, NgIf} from '@angular/common';
+import {HttpService} from '../../services/http-service.service';
+import {ProductsType} from '../../types/products.type';
 import {map, tap} from 'rxjs';
-import {SliceStringPipe} from '../../../pipes/slice-string.pipe';
-import {ActivatedRoute, RouterLink} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'cataloge',
-  standalone: true,
-  imports: [
-    NgForOf,
-    SliceStringPipe,
-    RouterLink,
-    NgIf
-  ],
+  standalone: false,
   templateUrl: './cataloge.component.html',
   styleUrl: './cataloge.component.scss'
 })
